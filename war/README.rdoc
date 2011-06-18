@@ -1,0 +1,24 @@
+= Mendeley Article Redirector
+
+This app was built in an afternoon to play with redirecting article identifiers such as doi/pmid to article pages on Mendeley.com
+
+This was done using Google App Engine to host a java servlet and the the Mendeley API for lookups, Bitly support was also added so we could
+eventually replace mnd.ly with more features. But due to GAE not supporting hosting apps on the root of a domain zone (DNS limitations) we're
+porting it over to work on AWS Elastic Beanstalk.
+
+So this is now mostly an example for using Mendeley's OAPI on Googel App Engine.
+
+== Usage
+
+Eclipse project and google eclipse plugin settings have been added to this repository, so if you have both of these installed you can use them
+to get up and running quickly
+
+ * Eclipse - http://www.eclipse.org/
+ * Google Plugin for Eclipse - http://code.google.com/eclipse/
+
+== Settings
+
+Before this will work you need to add it both a Mendeley OAPI key and optionally a Bit.ly API key. These go into the war/WEB-INF/redirector.properties file.
+
+ * Mendeley Consumer Key - http://dev.mendeley.com/
+ * Bit.ly key - http://api.bitly.com/
