@@ -1,0 +1,4 @@
+# Mendeley URL redirector
+# There won't be much content here, but loads of redirects to www.mendeley.com
+User-agent: *
+Allow: /

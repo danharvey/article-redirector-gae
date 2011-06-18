@@ -1,0 +1,58 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+    <title>Mendeley URL Redirector</title>
+  </head>
+
+  <body>
+    <h1>Mnd.ly URL Redirector</h1>
+	<p>
+	This app makes some useful urls and resources out of research article identifiers and Bitly hashes.
+	The aim was to make better persistent urls to point to our article pages than the current title slugs we generate by using existing 
+	identifiers for research articles that are used by other publications and organizations. The resulting app can redirect or generate resources
+	for a range of identifiers that the Mendeley OAPI can support.
+	<p>
+	<p>
+	To be able to have a short url, forwarding requests to bit.ly was added so that we can replace the mnd.ly short url service with a combination of the two.
+	As we can't move that over without more work this has been setup using the r.mensearch.net domain for the demo.
+	</br></br>
+	<p style="color:red;font-size:28">PLEASE DON'T USE THIS IN THE WILD YET</p>
+	<p>as I'll be chaging the url to mnd.ly soon so and won't gaurentee any r.mensearch.net links will contine to work. <br>
+	I'll send out details once it's all finalized! Also, please let me know any comments / ideas you have.
+	</p>
+	<h2>Usage</h2>
+	<p>This app supports the following url schemas :-</p>
+	<lu>
+		<li>Bitly - http://r.mensearch.com/{bitly-hash}</li>
+		<li>Article id - http://r.mensearch.com/{type}/{identifier}</li>
+	</lu>
+	<p>Where {type} can be any identifier supported by Mendeley, currently: arxiv, doi, isbn, pmid, scopus or ssm<p>
+	<p>Outputting the following resources :-</p>
+	<lu>
+		<li>redirect</li>
+		<li>json</li>
+		<li>qr</li>
+	</lu>
+	<p>These are used by adding ?format={format} to the url, with redirect being the default when nothing is specified.</p>
+	
+	<p>Some examples</p>
+	<a href="http://r.mensearch.net/pmid/19782018">http://r.mensearch.net/pmid/19782018</a></br>
+	<a href="http://r.mensearch.net/danharvey?format=json">http://r.mensearch.net/danharvey?format=json</a><br>
+	<a href="http://r.mensearch.net/pmid/18492790?format=qr">http://r.mensearch.net/pmid/18492790?format=qr</a>
+	<p>or some QR images :-</p>
+	<table>
+		<tr>
+			<td>pmid: 18492790</td>
+			<td>arXiv: 1104.2948</td>
+			<td>doi: 10.1016/j.cub.2011.03.017</td>
+		</tr>
+		<tr>
+			<td><img src="http://r.mensearch.net/pmid/18492790?format=qr"></td>
+			<td><img src="http://r.mensearch.net/arxiv/1104.2948?format=qr"></td>
+			<td><img src="http://r.mensearch.net/doi/10.1016/j.cub.2011.03.017?format=qr"></td>
+		</tr>
+	</table>
+  </body>
+</html>
